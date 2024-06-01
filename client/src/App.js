@@ -1,6 +1,6 @@
 // import './App.css';
 // import './custom.scss';
-
+// import './styles/main.scss'
 
 import Home from "./pages/home/Home";
 

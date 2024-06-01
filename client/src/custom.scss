@@ -1,3 +1,5 @@
+  // @import './styles/variables';
+
 
 // $primary: #FA8232;
 $secondary: #1B6392;
@@ -13,32 +15,38 @@ $secondary: #1B6392;
 // $gray-900: #212529;
 
 // $grays: (
-//   "100": $gray-100,
-//   "200": $gray-200,
-//   "300": $gray-300,
-//   "400": $gray-400,
-//   "500": $gray-500,
-//   "600": $gray-600,
-//   "700": $gray-700,
-//   "800": $gray-800,
-//   "900": $gray-900
-// );
-
-
-// ----------------------------------------------
-
-$spacer: 1rem;
-$spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  6: $spacer * 5,
-  7: $spacer * 6,
+  //   "100": $gray-100,
+  //   "200": $gray-200,
+  //   "300": $gray-300,
+  //   "400": $gray-400,
+  //   "500": $gray-500,
+  //   "600": $gray-600,
+  //   "700": $gray-700,
+  //   "800": $gray-800,
+  //   "900": $gray-900
+  // );
+  
+  
+  // ----------------------------------------------
+  
+  $spacer: 1rem;
+  $spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 5,
+    7: $spacer * 6,
   10: $spacer * 18,
-);
+  );
 
+  
 
-@import '~bootstrap/scss/bootstrap.scss';
+  $breadcrumb-divider: quote('>');
+  
+  
+  @import '~bootstrap/scss/bootstrap.scss';
+  
+  // @import './styles/main.scss';
