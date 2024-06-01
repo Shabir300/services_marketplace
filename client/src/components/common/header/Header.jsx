@@ -7,9 +7,12 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import './header.scss';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => {
   return (
+<>
     <Container fluid className='bg-secondary text-white py-3 '>
         <Row  className='border-bottom pb-2 border-info-subtle px-md-7'> 
             <Col > 
@@ -39,7 +42,7 @@ const Header = () => {
                 <InputGroup >
                     <Form.Control
                         placeholder='Search for anything...'
-                    />
+                        />
                     <InputGroup.Text ><i class="bi bi-search"></i></InputGroup.Text>
                 </InputGroup>
             </Col>
@@ -50,7 +53,44 @@ const Header = () => {
                 <i class="bi bi-person-circle"></i>
             </Col>
         </Row>
+
     </Container>
+
+    <Container className='text-secondary header-navs' >
+        <Row className='bg-white text-secondary py-3 d-flex flex-row align-items-center'>
+            <Col sm={9} as='div' className='navbar d-flex flex-row gap-3'>
+                <Nav >
+                    <NavDropdown className='d-flex flex-row gap-2' title='All Category'>
+                        <NavDropdown.Item>Something</NavDropdown.Item>
+                        <NavDropdown.Item>Something</NavDropdown.Item>
+                        <NavDropdown.Item>Something</NavDropdown.Item>
+                    </NavDropdown>
+
+                    <Nav.Item  >
+                        <Nav.Link className='d-flex flex-row gap-2'><i class="bi bi-geo-alt-fill"></i>Track Order</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item  >
+                        <Nav.Link className='d-flex flex-row gap-2'><i class="bi bi-arrow-down-up"></i>Compare</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item  >
+                        <Nav.Link className='d-flex flex-row gap-2'><i class="bi bi-telephone-outbound"></i>Customer Support</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item  >
+                        <Nav.Link className='d-flex flex-row gap-2'><i class="bi bi-info-circle"></i>Need Help</Nav.Link>
+                    </Nav.Item>
+
+                </Nav>
+            </Col>
+
+            <Col>
+            <i class="bi bi-telephone"></i> +923233937310
+            </Col>
+        </Row>
+    </Container>
+</>
   )
 }
 
