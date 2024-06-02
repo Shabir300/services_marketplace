@@ -64,7 +64,7 @@ address, article, aside, details, figcaption, figure, footer, header, hgroup, ma
 
 /* Reset heading margins */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  margin: 0 !important;
   font-weight: normal;
 }
 

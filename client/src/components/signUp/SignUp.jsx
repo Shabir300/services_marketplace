@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import './signup.scss'
+import './signup.scss';
 
 const SignUp = () => {
 
@@ -41,25 +41,31 @@ const SignUp = () => {
 
        const form = event.currentTarget;
 
-       if (inputs.password !== inputs.confirmPassword) {
-            // setValidated(true);
+       const password = form.elements['password'].value;
+        const confirmPassword = form.elements['confirmPassword'].value;
+
+        if (password !== confirmPassword) {
             setPasswordMatch(false);
-       } else {
-        setPasswordMatch(true);
-        setValidated(true )
-       }
+            setValidated(false);
+        } else {
+            setPasswordMatch(true);
+            setValidated(true);
+            // Handle successful form submission, e.g., send data to the server
+            // Here, you can access other form values similarly using form.elements['name'].value, form.elements['email'].value, etc.
+            console.log('Form is valid. Submit the data.');
+        }
 
     };
 
 
-    console.log('password match: ', passwordMatch)
+    // console.log('password match: ', passwordMatch)
 
   return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit} className='signupForm  py-5 border  my-5 d-flex flex-column gap-4 shadow-md'>
+    <Form noValidate validated={validated} onSubmit={handleSubmit} className='signupForm  d-flex flex-column gap-4 '>
 
-        <Row className='w-auto mx-auto'>
+        {/* <Row className='w-auto mx-auto'>
             <span className='h2'>Sign Up</span>
-        </Row>
+        </Row> */}
 
         <Row>
             <Form.Group>
