@@ -1,23 +1,84 @@
-/* body {
-  margin: 0;
-  font-family: public-sans,
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
-
-* {
-  font-family: "Public Sans", sans-serif;
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow: hidden
 }
 
+/* Typography */
+body {
+  font-family: "Public Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Code blocks */
+code {
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Reset form elements */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Prevent overflow issues on body */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Basic reset for other common elements */
+address, article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/* Reset heading margins */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Reset paragraphs */
+p {
+  margin: 0;
+}
+
+/* Remove default fieldset border */
+fieldset {
+  border: 0;
+}
+
+
+.bi {
+  cursor: pointer;
+}
