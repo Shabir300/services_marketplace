@@ -5,8 +5,10 @@ import {
 
 import Home from "./pages/home/Home";
 import Auth from "./pages/auth/signupLogin/signupLogin";
-import { ForgotPasswordPage } from "./pages/auth/forgotPassword/ForgotPasswordPage";
-
+import ForgotPasswordPage from "./pages/auth/forgotPassword/ForgotPasswordPage";
+import ResetPasswordPage from "./pages/auth/resetPassword/ResetPasswordPage";
+import Verify from "./pages/auth/verify/Verify";
+import NotFoundPage from "./pages/notFound/NotFound";
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
     {
       path: "/",
       element: <Home />,
+      errorElement: <NotFoundPage />
     },
     {
       path: '/auth',
@@ -22,7 +25,18 @@ function App() {
     {
       path: '/forgot-password',
       element: <ForgotPasswordPage />,
-    }
+    },
+    {
+      path: '/reset-password',
+      element: <ResetPasswordPage />,
+    },
+    {
+      path: "/verify",
+      element: <Verify />,
+    },
+    // {
+    //   element: <NotFoundPage />,
+    // }
   ]);
 
   return (

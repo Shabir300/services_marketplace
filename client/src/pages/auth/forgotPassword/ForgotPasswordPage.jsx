@@ -4,7 +4,7 @@ import Breadcrumbs from '../../../components/common/breadcrumbs/Breadcrumbs';
 import ForgotPassword from '../../../components/forgotPassword/ForgotPassword';
 import Footer from '../../../components/common/footer/Footer';
 
-export const ForgotPasswordPage = () => {
+ const ForgotPasswordPage = () => {
   return (
     <div>
         <Header />
@@ -13,4 +13,6 @@ export const ForgotPasswordPage = () => {
         <Footer />
     </div>
   )
-}
+};
+
+export default ForgotPasswordPage;
